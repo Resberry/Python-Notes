@@ -1,4 +1,4 @@
-#### 安装Sklearn
+### 安装Sklearn
 pip按顺序安装：numpy、scipy、matplotlib、sklearn。
 
 *#sklearn是package不是module，所以引入时不能`import sklearn`，而是`from sklearn import xxx`*
@@ -7,8 +7,8 @@ pip按顺序安装：numpy、scipy、matplotlib、sklearn。
 
 <br>
 
-#### KMeans聚类
-##### 基本思想
+### KMeans聚类
+#### 基本思想
 k-means算法以k为参数，把n个对象分成k个簇，使簇内具有较高的相似度，而簇间的相似度较低。
 
 其处理过程如下：
@@ -17,7 +17,7 @@ k-means算法以k为参数，把n个对象分成k个簇，使簇内具有较高�
 3. 对每个簇，计算所有点的均值作为新的聚类中心。
 4. 重复2、3直到聚类中心不再发生改变。
 
-##### 实例讲解
+#### 实例讲解
 数据介绍：现有1999年全国31个省份城镇居民家庭平均每人全年消费性支出的八个主要变量数据，根据数据对省份进行聚类。
 
 数据形如：
@@ -26,7 +26,7 @@ k-means算法以k为参数，把n个对象分成k个簇，使簇内具有较高�
 天津 2460 495.47 697.33 302.87 284.19 735.97 570.84 305.08
 河北 1496 515.9 362.37 285.32 272.95 540.58 364.91 188.63
 ```
-##### 程序设计
+#### 程序设计
 ```python
 import numpy as np
 from sklearn.cluster import KMeans
@@ -54,7 +54,7 @@ for i in range(len(CityCluster)):
 	print("Expenses:%.2f"%expenses[i])
 	print(CityCluster[i])
 ```
-##### 运行结果
+#### 运行结果
 ```python
 Expenses:3827.87
 ['河北','山西','内蒙古','辽宁','吉林','黑龙江','安徽','江西','山东','河南','湖北','贵州','陕西','甘肃','青海','宁夏','新疆']
@@ -67,8 +67,8 @@ Expenses:7754.66
 
 <br>
 
-#### DBSCAN密度聚类
-##### 基本思想
+### DBSCAN密度聚类
+#### 基本思想
 特点：聚类的时候不需要预先指定簇的个数，最终的簇的个数不定。
 
 DBSCAN算法将数据点分为三类：
@@ -89,10 +89,10 @@ min_samples：簇的最小样本数
 metric：距离计算方式
 sklearn.cluster.DBSCAN(eps=0.5, min_samples=5, metric='euclidean')
 
-##### 实例讲解
+#### 实例讲解
 现有大学校园网的日志数据，290条大学生的校园网使用情况数据。利用上网时段，分析学生上网的模式。
 
-##### 程序设计
+#### 程序设计
 ```python
 import numpy as np
 import sklearn.cluster as skc
@@ -128,18 +128,18 @@ plt.show()     #展示图形
 
 <br>
 
-#### 降维：PCA算法
-##### 基本思想
+### 降维：PCA算法
+#### 基本思想
 主成分分析（Principal Component Analysis，PCA）是最常用的一种降维方法，可以把具有相关性的高维变量合成为线性无关的低维变量，称为主成分，主成分能够尽可能保留原始数据的信息。
 sklearn.decomposition.PCA
 
 主要参数有：
 * n_components：指定主成分的个数，即降维后数据的维度
 * svd_solver：设置特征值分解的方法，默认为'auto'，其他可选有'full', 'arpack', 'randomized'
-##### 实例讲解
+#### 实例讲解
 已知鸢尾花数据是4维的，共三类样本。使用PCA实现对鸢尾花数据进行降维，实现在二维平面上的可视化。
 
-##### 程序设计
+#### 程序设计
 ```python
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
@@ -174,8 +174,8 @@ plt.show()
 
 <br>
 
-#### 降维：NMF算法
-##### 基本思想
+### 降维：NMF算法
+#### 基本思想
 非负矩阵分解（Non-negative Matrix Factorization，NMF）是在矩阵中所有元素均为非负数约束条件之下的矩阵分解方法。
 
 基本思想：给定一个非负矩阵V，NMF能够找到一个非负矩阵W和一个非负矩阵H，使得矩阵W和H的乘积近似等于矩阵V中的值。
@@ -190,9 +190,9 @@ sklearn.decomposition.NMF
 * n_components：用于指定分解后矩阵的单个维度k
 * init：W矩阵和H矩阵的初始化方式，默认为'nndsvdar'
 
-##### 实例讲解
+#### 实例讲解
 已知Olivetti人脸数据共400个，每个数据是64*64大小。由于NMF分解得到的W矩阵相当于从原始矩阵中提取的特征，那么就可以使用NMF对400个人脸数据进行特征提取。
-##### 程序设计
+#### 程序设计
 ```python
 from numpy.random import RandomState
 import matplotlib.pyplot as plt
@@ -243,16 +243,16 @@ plt.show()
 
 <br>
 
-#### KMeans图像分割
-##### 基本思想
+### KMeans图像分割
+#### 基本思想
 利用图像的灰度、颜色、纹理、形状等特征，把图像分成若干个互不重叠的区域，并使这些特征在同一区域内呈现相似性，在不同的区域之间存在明显的差异性。然后就可以将分割的图像中具有独特性质的区域提取出来用于不同的研究。 
-##### 实例讲解
+#### 实例讲解
 目标：利用K-means聚类算法对图像像素点颜色进行聚类实现简单的图像分割。
 
 输出：同一聚类中的点使用相同颜色标记，不同聚类颜色不同。
 
 #本实验涉及对图片的加载和创建，所以需要PIL包，`pip install pillow`。
-##### 程序设计
+#### 程序设计
 ```python
 import PIL.Image as image
 from sklearn.cluster import KMeans
