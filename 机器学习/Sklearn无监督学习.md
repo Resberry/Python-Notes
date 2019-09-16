@@ -212,14 +212,14 @@ def plot_gallery(title, images, n_col=n_col, n_row=n_row):
     plt.suptitle(title, size=16)
  
     for i, comp in enumerate(images): 
-        plt.subplot(n_row, n_col, i + 1)           #绘制子图
+        plt.subplot(n_row, n_col, i + 1)                  #绘制子图
         vmax = max(comp.max(), -comp.min())
  
         plt.imshow(comp.reshape(image_shape), cmap=plt.cm.gray,
                    interpolation='nearest', vmin=-vmax, vmax=vmax) 
                    #对数值归一化，并以灰度图形显示;interpolation表示色块边界的模糊程度；vmax和vmin控制亮度
         plt.xticks(())
-        plt.yticks(()) #去除子图的坐标轴标签
+        plt.yticks(())                                    #去除子图的坐标轴标签
     plt.subplots_adjust(0.01, 0.05, 0.99, 0.94, 0.04, 0.) #调整子图位置及间隔
      
 plot_gallery("First centered Olivetti faces", faces[:n_components])
@@ -261,7 +261,7 @@ def loadData(filePath):
     f = open(filePath,'rb')
     data = []
     img = image.open(f)
-    m,n = img.size #获得图片像素大小
+    m,n = img.size                      #获得图片像素大小
     for i in range(m):
         for j in range(n):
             x,y,z = img.getpixel((i,j)) #获得每个像素点的RGB颜色
@@ -273,7 +273,7 @@ imgData,row,col = loadData('F:/timg.jpg')
 label = KMeans(n_clusters=4).fit_predict(imgData)
  
 label = label.reshape([row,col])
-pic_new = image.new("L", (row, col)) #创建一张新的图保存聚类后的结果，'L'表示灰度图
+pic_new = image.new("L", (row, col))    #创建一张新的图保存聚类后的结果，'L'表示灰度图
 for i in range(row):
     for j in range(col):
         pic_new.putpixel((i,j), int(256/(label[i][j]+1))) 
