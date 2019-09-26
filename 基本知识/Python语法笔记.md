@@ -115,6 +115,21 @@ __init__方法：在类的一个对象被建立时，马上运行。（类似还
 
 读取数据：`pickle.load(文件变量)`
 
+### 异常
+ ```python
+try:
+  <语句>                        #运行代码
+except <异常的名字> as e：
+  <语句>                        #如果在try部分引发了该异常，则运行此语句
+  print(str(e))                 #打印异常信息
+  print((repr(e))               #打印异常类型和异常信息
+  print(traceback.format_exc()) #打印完整traceback（需import traceback）
+else:
+  <语句>                         #如果没有异常发生，则运行此语句
+finally:
+	<语句>                         #无论有没有异常发生，都会在退出try之前运行此语句
+```
+
 ### 其他
 列表综合：`listone=[2,3,4]，listtwo=[2*i for i in listone if i>2]`，listtwo输出结果为[6,8]。
 
