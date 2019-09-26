@@ -12,4 +12,4 @@
 
 为配置可交互环境，我们打开Package Control，输入Install Package回车，在新出现的输入框里输入SublimeREPL，点击即可安装。
 
-使用时点击Tools-SublimeREPLsublimerepl-Python-Python-RUN current file即可为当前代码进行可交互编译。
+使用时点击Tools-SublimeREPLsublimerepl-Python-Python-RUN current file即可为当前代码进行可交互编译。*#编译前一定要先手动保存*
