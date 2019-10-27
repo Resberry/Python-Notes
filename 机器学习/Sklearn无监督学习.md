@@ -63,7 +63,7 @@ Expenses:5113.54
 Expenses:7754.66
 ['北京','上海','广东']
 ```
-*#K-Means计算距离时默认使用欧式距离，且没有有关的参数，如果想更换，可以修改K-Means的源代码：在euclidean_distances函数处，使用scipy.spatial.distance.cdist(A,B,metric=' ')，通过metric参数进行更换。*
+*#K-Means计算距离时默认使用欧式距离，且没有有关的参数，如果想更换，可以修改K-Means的源代码：在euclidean_distances函数处，使用`scipy.spatial.distance.cdist(A,B,metric=' ')`，通过metric参数进行更换。*
 
 <br>
 
