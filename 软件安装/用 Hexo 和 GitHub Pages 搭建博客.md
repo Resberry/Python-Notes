@@ -24,7 +24,7 @@ Hexo 是一个博客框架，它把本地文件里的信息生成一个网页。
 * 输入`hexo -v`得到 hexo-cli 等一串数据说明安装成功。
 
 4. 创建本地博客
-* 在本地创建文件夹，如 D 盘创建文件夹 blog 。
+* 在本地创建文件夹，如D盘创建文件夹 blog 。
 * 鼠标右键 blog，选择 Git Bash Here。打开后，所在位置就是 blog 文件夹的位置 /d/blog。
 * 输入`hexo init`将 blog 文件夹初始化成一个博客文件夹。
 * 输入`npm install`安装依赖包。
@@ -53,5 +53,5 @@ deploy:
 
 ## 发布一篇博客
 
-* 在 Git Bash 里，所在路径还是 /d/blog。输入 `hexo new "日志名"`，在 D:\blog\source\_posts 路径下会出现一个 日志名.md 的文件，编辑此文件并保存。也可去该路径手动创建.md文件
+* 在 Git Bash 里，所在路径还是 /d/blog。输入`hexo new "日志名"`，在 D:\blog\source\_posts 路径下会出现一个 日志名.md 的文件，编辑此文件并保存。也可去该路径手动创建.md文件
 * 回到 Git Bash，输入`hexo g`和`hexo d`部署（*或直接输入`hexo d -g`*）。
