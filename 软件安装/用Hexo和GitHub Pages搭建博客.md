@@ -53,5 +53,5 @@ deploy:
 
 ## 发布一篇博客
 
-* 在 Git Bash 里，所在路径还是 /d/blog。输入`hexo new "日志名"`，在 D:\blog\source\_posts 路径下会出现一个 日志名.md 的文件，编辑此文件并保存。也可去该路径手动创建.md文件
+* 在 Git Bash 里，所在路径还是 /d/blog。输入`hexo new "日志名"`，在 D:\blog\source\_posts 路径下会出现一个 日志名 .md 的文件，编辑此文件并保存。也可去该路径手动创建 .md 文件
 * 回到 Git Bash，输入`hexo g`和`hexo d`部署（*或直接输入`hexo d -g`*）。
