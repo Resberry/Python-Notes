@@ -1,14 +1,14 @@
 ## Github Pages
-Github Pages本身就是Github提供的博客服务。在Github中创建一个特定格式的 Repository，Github Pages就会将里面的信息生成一个网页展示出来。
+Github Pages 本身就是 Github 提供的博客服务。在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页展示出来。
 
 操作如下：
 
-* 注册Github账号，在Github中创建一个名为resberry.github.io的Repository。（*resberry为你的github账户用户名且必须小写*）
-* 创建仓库时勾选“Initialize this repository with a README”。
-* 打开网页resberry..github.io就可以看到README.md里的内容了。这个Repository就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被网页显示出来。
+* 注册 Github 账号，在 Github 中创建一个名为 resberry.github.io的Repository 。（*resberry 为你的 github 账户用户名且必须小写*）
+* 创建仓库时勾选 Initialize this repository with a README 。
+* 打开网页 resberry..github.io 就可以看到 README.md 里的内容了。这个 Repository 就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被网页显示出来。
 
 ## Hexo
-Hexo是一个博客框架，它把本地文件里的信息生成一个网页。
+Hexo 是一个博客框架，它把本地文件里的信息生成一个网页。
 
 操作如下：
 1. 安装 Node.js
@@ -49,7 +49,7 @@ deploy:
 * 回到 Git Bash，输入`npm install hexo-deployer-git --save`安装 hexo-deployer-git。
 * 输入`git config --global user.name "github用户名"`和`git config --global user.email  "github邮箱名"`登录个人信息。
 * 输入`hexo d`得到`INFO Deploy done: git`即为部署成功，之前我们创建的 README.md 会被自动覆盖掉。
-（*若报错可以删掉路径下的.deploy_git文件夹重试，*）
+（*若报错可以删掉路径下的.deploy_git文件夹重试*）
 
 
 ## 发布一篇博客
