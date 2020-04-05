@@ -1,4 +1,4 @@
-### Github Pages
+## Github Pages
 Github Pages本身就是Github提供的博客服务。在Github中创建一个特定格式的 Repository，Github Pages就会将里面的信息生成一个网页展示出来。
 
 操作如下：
@@ -7,7 +7,7 @@ Github Pages本身就是Github提供的博客服务。在Github中创建一个�
 * 创建仓库时勾选“Initialize this repository with a README”。
 * 打开网页resberry..github.io就可以看到README.md里的内容了。这个Repository就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被网页显示出来。
 
-### Hexo
+## Hexo
 Hexo是一个博客框架，它把本地文件里的信息生成一个网页。
 
 操作如下：
@@ -32,7 +32,7 @@ Hexo是一个博客框架，它把本地文件里的信息生成一个网页。
 * 输入`hexo s`将生成的网页放在本地服务器（server）。
 * 浏览器里输入 http://localhost:4000/ 即可预览网页。回到Git Bash，按Ctrl+C结束预览。
 
-### 将本地 Hexo 博客部署在 Github 上
+## 将本地 Hexo 博客部署在 Github 上
 我们现在已经有了本地博客，和一个能托管这些资料的线上仓库。只要把本地博客部署（deploy）在我们的 Github 对应的 Repository 就可以了。
 
 操作如下：
@@ -48,11 +48,11 @@ deploy:
 ```
 * 回到 Git Bash，输入`npm install hexo-deployer-git --save`安装 hexo-deployer-git。
 * 输入`git config --global user.name "github用户名"`和`git config --global user.email  "github邮箱名"`登录个人信息。
-* 输入`hexo d`得到`INFO Deploy done: git`即为部署成功，之前我们创建的 ReadMe.md 会被自动覆盖掉。
+* 输入`hexo d`得到`INFO Deploy done: git`即为部署成功，之前我们创建的 README.md 会被自动覆盖掉。
 （*若报错可以删掉路径下的.deploy_git文件夹重试，*）
 
 
-### 发布一篇博客
+## 发布一篇博客
 
 * 在 Git Bash 里，所在路径还是 /d/blog。输入 hexo new "日志名"，在 D:\blog\source\_posts 路径下，会出现一个 日志名.md 的文件，编辑此文件并保存。也可去该路径手动创建.md文件
 * 回到Git Bash，输入`hexo g`和`hexo d`部署（*或直接输入`hexo d -g`*）。
