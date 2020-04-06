@@ -11,26 +11,26 @@ Github Pages 本身就是 Github 提供的博客服务。在 Github 中创建一
 Hexo 是一个博客框架，它把本地文件里的信息生成一个网页。
 
 操作如下：
-1. 安装 Node.js
-* 前往 https://nodejs.org/en/ 。
-* 点击左侧 LTS 版本下载并安装。
-* 打开 cmd，输入`node -v`得到当前版本号说明安装成功。
-2. 安装 Git
-* 前往 https://git-scm.com/ 。
-* 点击 Downloads，点击 Windows。若未开始下载就点击 click here to download manually 。
-* 打开 cmd，输入`git --version`得到当前版本号说明安装成功（*若 git 指令无效则需重启或去环境变量添加 path *）。
-3. 安装 Hexo
-* 打开 cmd ，输入`npm install -g hexo-cli`。
-* 输入`hexo -v`得到 hexo-cli 等一串数据说明安装成功。
+* 安装 Node.js
+   * 前往 https://nodejs.org/en/ 。
+   * 点击左侧 LTS 版本下载并安装。
+   * 打开 cmd，输入`node -v`得到当前版本号说明安装成功。
+* 安装 Git
+   * 前往 https://git-scm.com/ 。
+   * 点击 Downloads，点击 Windows。若未开始下载就点击 click here to download manually 。
+   * 打开 cmd，输入`git --version`得到当前版本号说明安装成功（*若 git 指令无效则需重启或去环境变量添加 path *）。
+* 安装 Hexo
+   * 打开 cmd ，输入`npm install -g hexo-cli`。
+   * 输入`hexo -v`得到 hexo-cli 等一串数据说明安装成功。
 
-4. 创建本地博客
-* 在本地创建文件夹，如 D 盘创建文件夹 blog 。
-* 鼠标右键 blog，选择 Git Bash Here。打开后，所在位置就是 blog 文件夹的位置 /d/blog。
-* 输入`hexo init`将 blog 文件夹初始化成一个博客文件夹。
-* 输入`npm install`安装依赖包。
-* 输入`hexo g`生成网页（generate）。由于我们还没创建任何博客，生成的网页会展示 Hexo 自带的 Hello World 博客。
-* 输入`hexo s`将生成的网页放在本地服务器（server）。
-* 浏览器里输入 http://localhost:4000/ 即可预览网页。回到 Git Bash，按 Ctrl+C 结束预览。
+* 创建本地博客
+   * 在本地创建文件夹，如 D 盘创建文件夹 blog 。
+   * 鼠标右键 blog，选择 Git Bash Here。打开后，所在位置就是 blog 文件夹的位置 /d/blog。
+   * 输入`hexo init`将 blog 文件夹初始化成一个博客文件夹。
+   * 输入`npm install`安装依赖包。
+   * 输入`hexo g`生成网页（generate）。由于我们还没创建任何博客，生成的网页会展示 Hexo 自带的 Hello World 博客。
+   * 输入`hexo s`将生成的网页放在本地服务器（server）。
+   * 浏览器里输入 http://localhost:4000/ 即可预览网页。回到 Git Bash，按 Ctrl+C 结束预览。
 
 ## 将本地 Hexo 博客部署在 Github 上
 我们现在已经有了本地博客，和一个能托管这些资料的线上仓库。只要把本地博客部署（deploy）在我们的 Github 对应的 Repository 就可以了。
@@ -55,3 +55,17 @@ deploy:
 
 * 在 Git Bash 里，所在路径还是 /d/blog。输入`hexo new "日志名"`，在 D:\blog\source\_posts 路径下会出现一个 日志名 .md 的文件，编辑此文件并保存。也可去该路径手动创建 .md 文件
 * 回到 Git Bash，输入`hexo g`和`hexo d`部署（*或直接输入`hexo d -g`*）。
+
+## 更换主题
+大概思路就是把整个主题的文件克隆到我们的主题文件夹中，在配置文件中注明使用该主题。
+
+操作如下：
+* 去 https://hexo.io/themes/ 挑选主题。
+* 下载该主题，将其放入 D:\blog\themes。
+* 修改博客配置文件。
+   * 打开 D:\blog\_config.yml。
+   * 找到 theme，将 Hexo 默认的 lanscape 修改成新主题名。
+   * 找到 # Site，添加博客名称，作者名字等。
+   * 在 language 后面填入 en 或者 zh-CN，选择英文或中文。
+   * 找到 # URL，填入 url。比如 url: https://resberry.github.io 。
+* 重新生成部署。
